@@ -2,7 +2,7 @@ BUILD:=../build
 SRC:=.
 
 MULTIBOOT2:=0x10000
-ENTRYPOINT:=$(shell python -c "print(f'0x{$(MULTIBOOT2) + 64:x}')")
+ENTRYPOINT:=$(shell python3 -c "print(f'0x{$(MULTIBOOT2) + 64:x}')")
 
 CFLAGS:= -m32 # 32 位的程序
 CFLAGS+= -fno-builtin	# 不需要 gcc 内置函数
